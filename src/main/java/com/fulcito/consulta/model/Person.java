@@ -5,37 +5,16 @@
  */
 package com.fulcito.consulta.model;
 
+import lombok.Data;
+
 /**
  *
  * @author Alfredo
  */
+@Data
 public class Person {
     private Integer id;
     private String name;
     private String fatherName;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getFatherName() {
-        return fatherName;
-    }
-
-    public void setFatherName(String fatherName) {
-        this.fatherName = fatherName;
-    }
- 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
     
 }
