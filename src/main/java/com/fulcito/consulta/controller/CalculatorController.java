@@ -15,29 +15,23 @@ public class CalculatorController {
     @GetMapping("/resta")
     public String getResta(@RequestParam Double a, @RequestParam Double b){
 
-        Calculator calculator = new Calculator();
-        calculator.setA(a);
-        calculator.setB(b);
 
         return (a-b)+"";
     }
     @GetMapping("/divicion")
     public String getDivicion(@RequestParam Double a, @RequestParam Double b){
 
-        Calculator calculator = new Calculator();
-        calculator.setA(a);
-        calculator.setB(b);
-
         return (a/b)+"";
     }
     @GetMapping("/multiplicacion")
     public String getMultiplicacion(@RequestParam Double a, @RequestParam Double b){
 
-        Calculator calculator = new Calculator();
-        calculator.setA(a);
-        calculator.setB(b);
-
         return (a*b)+"";
     }
 
+    @GetMapping("/convertirMoneda")
+    public String getConvertirModena(@RequestParam Double cantidad){
+        cantidad = cantidad*3.1;
+        return cantidad+" Soles";
+    }
 }
