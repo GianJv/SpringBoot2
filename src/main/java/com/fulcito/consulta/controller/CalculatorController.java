@@ -15,27 +15,15 @@ public class CalculatorController {
     @GetMapping("/resta")
     public String getResta(@RequestParam Double a, @RequestParam Double b){
 
-        Calculator calculator = new Calculator();
-        calculator.setA(a);
-        calculator.setB(b);
-
         return (a-b)+"";
     }
     @GetMapping("/divicion")
     public String getDivicion(@RequestParam Double a, @RequestParam Double b){
 
-        Calculator calculator = new Calculator();
-        calculator.setA(a);
-        calculator.setB(b);
-
         return (a/b)+"";
     }
     @GetMapping("/multiplicacion")
     public String getMultiplicacion(@RequestParam Double a, @RequestParam Double b){
-
-        Calculator calculator = new Calculator();
-        calculator.setA(a);
-        calculator.setB(b);
 
         return (a*b)+"";
     }
