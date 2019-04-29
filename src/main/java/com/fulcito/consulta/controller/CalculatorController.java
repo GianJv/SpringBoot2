@@ -15,6 +15,7 @@ public class CalculatorController {
     @GetMapping("/resta")
     public String getResta(@RequestParam Double a, @RequestParam Double b){
 
+
         return (a-b)+"";
     }
     @GetMapping("/divicion")
@@ -28,4 +29,14 @@ public class CalculatorController {
         return (a*b)+"";
     }
 
+    @GetMapping("/convertirMoneda")
+    public String getConvertirModena(@RequestParam Double cantidad){
+        cantidad = cantidad*3.1;
+        return cantidad+" Soles";
+    }
+    @GetMapping("/convertirKg")
+    public String getConvertirKg(@RequestParam Double cantidad){
+        cantidad = cantidad * 1000;
+        return cantidad+" gm";
+    }
 }
